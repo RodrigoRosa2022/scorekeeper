@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScoreMarker</title>
+    <title>ScoreKeeper</title>
     <link rel="stylesheet" href="index.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,52 +13,81 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 
 </head>
 <body>
     <div class="table">
-        <h1>Score Table</h1>
+        <div class="header">
+            <div class="headerContent">
+                <h1 class="headerTitle">Score Keeper</h1>
+                <img src="logo2.svg" alt="logo" class="logo" />
+            </div>
+        </div>
         <div class="board">
             <div class="playerCard">
-                <h3>Player A</h3>
+                <h3 class="bluePlayer">Player A<span class="material-symbols-outlined">edit</span></h3>
                 <div class="points">
                     23
                 </div>
                 <div class="buttons">
                     <div class="signalButtons">
                         <div class="negativeButtons">                            
-                            <button class="mainButton"><span class="text">-1</span></button>
+                            <button class="mainButton"><span class="btext">-1</span></button>
                             <div class="secondaryButtons">
-                                <button class="secondaryButton"><span class="text">-5</span></button>
-                                <button class="secondaryButton"><span class="text">-10</span></button>
+                                <button class="secondaryButton"><span class="btext">-5</span></button>
+                                <button class="secondaryButton"><span class="btext">-10</span></button>
                             </div>
-                            <button class="taylorButton"><span class="text">-x</span></button>
+                            <button class="taylorButton"><span class="btext">-x</span></button>
 
                         </div>                        
                     </div>
                     <div class="signalButtons">
-                        
-                        <div class="mainButton">+1</div>
-                        <div class="secondaryButtons">
-                            <div class="secondaryButton">+5</div>
-                            <div class="secondaryButton">+10</div>
-                        </div>
-                        <div class="taylorButton">+X</div>
-                        
+                        <div class="positiveButtons">                            
+                            <button class="mainButton"><span class="btext">+1</span></button>
+                            <div class="secondaryButtons">
+                                <button class="secondaryButton"><span class="btext">+5</span></button>
+                                <button class="secondaryButton"><span class="btext">+10</span></button>
+                            </div>
+                            <button class="taylorButton"><span class="btext">+x</span></button>
+                        </div>  
                     </div>
                 </div>
             </div>
             
             <div class="playerCard">
-                <h3>Player B</h3>
+                <h3 class="redPlayer">Player B<span class="material-symbols-outlined">edit</span></h3>
+                <div class="points">
+                    81
+                </div>
+                <div class="buttons">
+                    <div class="signalButtons">
+                        <div class="negativeButtons">                            
+                            <button class="mainButton"><span class="btext">-1</span></button>
+                            <div class="secondaryButtons">
+                                <button class="secondaryButton"><span class="btext">-5</span></button>
+                                <button class="secondaryButton"><span class="btext">-10</span></button>
+                            </div>
+                            <button class="taylorButton"><span class="btext">-x</span></button>
 
-                <span>Problems to be solved.<br>1- taylorbuttons css is not working. Button should be smaller.<br>2 - make negative buttons with red degrade border, and positive buttons with this current border or a green similar.<br> 3 - stylish the whole page <br>4 - javascript</span>
+                        </div>                        
+                    </div>
+                    <div class="signalButtons">
+                        <div class="positiveButtons">                            
+                            <button class="mainButton"><span class="btext">+1</span></button>
+                            <div class="secondaryButtons">
+                                <button class="secondaryButton"><span class="btext">+5</span></button>
+                                <button class="secondaryButton"><span class="btext">+10</span></button>
+                            </div>
+                            <button class="taylorButton"><span class="btext">+x</span></button>
+                        </div>  
+                    </div>
+                </div>
+
+
 
             </div>
         </div>
