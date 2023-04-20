@@ -24,11 +24,15 @@
             <div class="headerContent">
                 <h1 class="headerTitle">Score Keeper</h1>
                 <img src="logo2.svg" alt="logo" class="logo" />
+                <h1 class="headerTitleReset" onclick="reset()">Reset</h1>
             </div>
         </div>
         <div class="board">
             <div class="playerCard">
-                <h3 class="bluePlayer" id="bluePlayerName">Player A<span class="material-symbols-outlined" onclick="newNameA()">edit</span></h3>
+                <h3 class="bluePlayer" id="bluePlayerName">
+                    <span class="bluePlayerCurrentName" id="bluePlayerCurrentName">Player A</span>
+                    <span class="material-symbols-outlined" onclick="newNameA()">edit</span>
+                </h3>
                 <div class="points" id="playerAScore">
                     0
                 </div>
@@ -40,7 +44,7 @@
                                 <button class="secondaryButton" onclick="calculateA(-5)"><span class="btext">-5</span></button>
                                 <button class="secondaryButton" onclick="calculateA(-10)"><span class="btext">-10</span></button>
                             </div>
-                            <button class="taylorButton"><span class="btext">-x</span></button>
+                            <!-- <button class="taylorButton"><span class="btext">-x</span></button> -->
 
                         </div>                        
                     </div>
@@ -51,14 +55,17 @@
                                 <button class="secondaryButton" onclick="calculateA(5)"><span class="btext">+5</span></button>
                                 <button class="secondaryButton" onclick="calculateA(10)"><span class="btext">+10</span></button>
                             </div>
-                            <button class="taylorButton" onclick="taylor()"><span class="btext">+x</span></button>
+                            <!-- <button class="taylorButton" onclick="taylor()"><span class="btext">+x</span></button> -->
                         </div>  
                     </div>
                 </div>
             </div>
             
             <div class="playerCard">
-                <h3 class="redPlayer">Player B<span class="material-symbols-outlined">edit</span></h3>
+                <h3 class="redPlayer" id="redPlayerName">
+                    <span class="redPlayerCurrentName" id="redPlayerCurrentName">Player B</span>
+                    <span class="material-symbols-outlined" onclick="newNameB()">edit</span>
+                </h3>
                 <div class="points" id="playerBScore">
                     0
                 </div>
@@ -70,7 +77,7 @@
                                 <button class="secondaryButton" onclick="calculateB(-5)"><span class="btext">-5</span></button>
                                 <button class="secondaryButton" onclick="calculateB(-10)"><span class="btext">-10</span></button>
                             </div>
-                            <button class="taylorButton"><span class="btext">-x</span></button>
+                            <!-- <button class="taylorButton"><span class="btext">-x</span></button> -->
 
                         </div>                        
                     </div>
@@ -81,7 +88,7 @@
                                 <button class="secondaryButton" onclick="calculateB(5)"><span class="btext">+5</span></button>
                                 <button class="secondaryButton" onclick="calculateB(10)"><span class="btext">+10</span></button>
                             </div>
-                            <button class="taylorButton"><span class="btext">+x</span></button>
+                            <!-- <button class="taylorButton"><span class="btext">+x</span></button> -->
                         </div>  
                     </div>
                 </div>
@@ -97,6 +104,8 @@
 
 
     <footer>Website done from scratch, by Rodrigo Rosa</footer>
+
+    
     
     <script src="index.js"></script>        
 </body>

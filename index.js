@@ -10,25 +10,76 @@ function calculateA(added) {
     document.getElementById("playerBScore").textContent = playerBScore;
   }
 
+  function reset() {
+
+    document.getElementById("playerAScore").textContent = 0;
+    document.getElementById("playerBScore").textContent = 0;
+  }
+
   function taylor() {
 
   }
 
   function newNameA () {
 
-    document.getElementById("bluePlayerName").innerHTML = "<input type='text' id='fname' name='fname' value='Player A' autofocus><span class='material-symbols-outlined' onclick='doneNameA()'>send</span>";
+    // Collects the current assigned name.
+    const currentNameA = document.getElementById("bluePlayerCurrentName");
+
+    document.getElementById("bluePlayerName").innerHTML = `
+    <input type='text' id='fname' name='fname' value='`+currentNameA.textContent+`' autofocus>
+    <span class='material-symbols-outlined' onclick='doneNameA()'>send</span>
+    `;
 
     const input = document.getElementById("fname");
     input.focus();  // set focus on the input element
     input.setSelectionRange(0, input.value.length);
-  }
+
+    input.addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        doneNameA(); 
+      }
+  });
+}
 
   function doneNameA () {
 
-    document.getElementById("bluePlayerName").innerHTML = "Alterado<span class='material-symbols-outlined' onclick='newNameA()'>edit</span>";
+    const input = document.getElementById("fname");
+
+    document.getElementById("bluePlayerName").innerHTML = `
+    <span class="bluePlayerCurrentName" id="bluePlayerCurrentName">`+input.value+`</span>
+    <span class="material-symbols-outlined" onclick="newNameA()">edit</span>`;
+
+  }
+
+
+  function newNameB () {
+
+    // Collects the current assigned name.
+    const currentNameB = document.getElementById("redPlayerCurrentName");
+
+    document.getElementById("redPlayerName").innerHTML = `
+    <input type='text' id='fname' name='fname' value='`+currentNameB.textContent+`' autofocus>
+    <span class='material-symbols-outlined' onclick='doneNameB()'>send</span>
+    `;
 
     const input = document.getElementById("fname");
     input.focus();  // set focus on the input element
     input.setSelectionRange(0, input.value.length);
+
+    input.addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        doneNameB(); 
+      }
+  });
+}
+
+  function doneNameB () {
+
+    const input = document.getElementById("fname");
+
+    document.getElementById("redPlayerName").innerHTML = `
+    <span class="redPlayerCurrentName" id="redPlayerCurrentName">`+input.value+`</span>
+    <span class="material-symbols-outlined" onclick="newNameB()">edit</span>`;
+
   }
 
