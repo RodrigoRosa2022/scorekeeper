@@ -26,11 +26,11 @@ function calculateA(added) {
     const currentNameA = document.getElementById("bluePlayerCurrentName");
 
     document.getElementById("bluePlayerName").innerHTML = `
-    <input type='text' id='fname' name='fname' value='`+currentNameA.textContent+`' autofocus>
+    <input type='text' id='bluefname' name='fname' value='`+currentNameA.textContent+`' autofocus onfocusout="doneNameA()">
     <span class='material-symbols-outlined' onclick='doneNameA()'>send</span>
     `;
 
-    const input = document.getElementById("fname");
+    const input = document.getElementById("bluefname");
     input.focus();  // set focus on the input element
     input.setSelectionRange(0, input.value.length);
 
@@ -43,7 +43,7 @@ function calculateA(added) {
 
   function doneNameA () {
 
-    const input = document.getElementById("fname");
+    const input = document.getElementById("bluefname");
 
     document.getElementById("bluePlayerName").innerHTML = `
     <span class="bluePlayerCurrentName" id="bluePlayerCurrentName">`+input.value+`</span>
@@ -58,11 +58,11 @@ function calculateA(added) {
     const currentNameB = document.getElementById("redPlayerCurrentName");
 
     document.getElementById("redPlayerName").innerHTML = `
-    <input type='text' id='fname' name='fname' value='`+currentNameB.textContent+`' autofocus>
+    <input type='text' id='redfname' name='fname' value='`+currentNameB.textContent+`' autofocus onfocusout="doneNameB()">
     <span class='material-symbols-outlined' onclick='doneNameB()'>send</span>
     `;
 
-    const input = document.getElementById("fname");
+    const input = document.getElementById("redfname");
     input.focus();  // set focus on the input element
     input.setSelectionRange(0, input.value.length);
 
@@ -75,7 +75,7 @@ function calculateA(added) {
 
   function doneNameB () {
 
-    const input = document.getElementById("fname");
+    const input = document.getElementById("redfname");
 
     document.getElementById("redPlayerName").innerHTML = `
     <span class="redPlayerCurrentName" id="redPlayerCurrentName">`+input.value+`</span>

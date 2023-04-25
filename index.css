@@ -126,7 +126,7 @@
     color: red;
   }
 
-  #fname {
+  #redfname, #bluefname {
     font-size: 46px;
     font-family: 'Fredoka', sans-serif;
     width: 50%;
@@ -135,12 +135,12 @@
     outline: none;
   }
 
-  .bluePlayer #fname {
+  #bluefname {
     color: blue;
 
   }
 
-  .redPlayer #fname {
+  #redfname {
     color: red;
 
   }
@@ -299,6 +299,7 @@
     }
   
   
+  
     .board {
       gap: 2px;
       font-size: 18px;
@@ -308,11 +309,12 @@
   
     .playerCard {
       margin: 4px;
-      width: 200px;
+      min-width: 152px;
+      border-radius: 30px;
     }
   
   
-    #fname {
+    #redfname, #bluefname {
       font-size: 18px;
     }
   
@@ -343,19 +345,25 @@
     }
   
     .mainButton{
-      font-size: 18px;
+      font-size: 30px;
       height: 80px;
-      line-height: 80px;
+      line-height: 75px;
     }
   
     .secondaryButtons {
       gap: 10px;
       margin: 10px 0px;
-      height: 60px;
+      height: 35px;
+    }
+
+    .secondaryButton .btext {
+      line-height: 30px;
     }
   
     .secondaryButton {
       font-size: 12px;
+      flex-basis: 50%;
+      flex-grow: 1;
     }
   
   
