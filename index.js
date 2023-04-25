@@ -16,10 +16,6 @@ function calculateA(added) {
     document.getElementById("playerBScore").textContent = 0;
   }
 
-  function taylor() {
-
-  }
-
   function newNameA () {
 
     // Collects the current assigned name.
